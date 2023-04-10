@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_library"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/c3"
+    android:layout_height="match_parent">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="lib Fragment" />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:visibility="invisible"
+            android:id="@+id/my_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="-20dp"
+            app:layout_constraintWidth_percent="1"
+            app:layout_constraintHeight_percent="1"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/aaa_0130" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:alpha="0.6"
+        android:layout_marginTop="105dp">
+
+        <Button
+            android:id="@+id/tracks_button"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:textAllCaps="false"
+            android:padding="8dp"
+            android:text="Playlist"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="9dp"/>
+        <Button
+            android:id="@+id/playlist_button"
+            android:layout_width="63dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="6dp"
+            android:textAllCaps="false"
+            android:padding="8dp"
+            android:text="Tracks"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textSize="9dp"/>
+    </LinearLayout>
+
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:tabTextColor="@color/c1"/>
+
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+
+</FrameLayout>
