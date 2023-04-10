@@ -1,106 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".tracks">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:visibility="visible"
-            android:id="@+id/my_image_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="-20dp"
-            app:layout_constraintWidth_percent="1"
-            app:layout_constraintHeight_percent="1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:src="@drawable/aaa_0130" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="180dp"
-        android:orientation="vertical"
-        android:alpha="0.9">
+        android:alpha="0.9"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginHorizontal="15dp">
-<!--            kanan-->
+
+            <!-- Left side -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:orientation="horizontal">
+
                 <ImageView
-                    android:layout_width="50dp"
+                    android:layout_marginHorizontal="7dp"
+                    android:layout_width="20dp"
                     android:layout_height="match_parent"
-                    android:background="@color/c1"/>
+                    android:src="@drawable/ic_discover"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Discover Songs"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Discover Songs"/>
             </LinearLayout>
 
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/c2"
-                    />
-
+            <!-- Right side -->
+            <ImageView
+                android:layout_marginRight="13dp"
+                android:layout_width="34dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:src="@drawable/ic_play"/>
 
         </LinearLayout>
 
 
-<!--Lagu        -->
+        <!-- Song -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginHorizontal="21dp"
+            android:layout_marginVertical="5dp"
             android:orientation="horizontal">
 
-<!--cover song --><ImageView
+            <!-- Song cover -->
+            <ImageView
                 android:layout_width="56dp"
                 android:layout_height="wrap_content"
-            android:src="@drawable/img_kda"/>
+                android:src="@drawable/img_kda"/>
 
+            <!-- Song info -->
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Song Name"/>
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Pop Stars"
+                    android:textSize="16sp"
+                    android:paddingTop="5dp"/>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Song Artist"/>
+                    android:layout_weight="1"
+                    android:text="K/Da"
+                    android:paddingBottom="5dp"/>
+
             </LinearLayout>
 
-
+            <!-- Action buttons -->
             <LinearLayout
-                android:orientation="horizontal"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
                 <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"
+                    android:layout_width="23dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_heartpluss"/>
+
                 <ImageView
+                    android:layout_gravity="center"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_more"/>
+
             </LinearLayout>
-            </LinearLayout>
+
+        </LinearLayout>
+
     </LinearLayout>
+
+    </ScrollView>
+
+
+
 </FrameLayout>
