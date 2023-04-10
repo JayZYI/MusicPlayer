@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:text="Text dari Playlist Fragment" />
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -20,31 +20,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tracks Page"
-            android:textSize="24sp"
+            android:textSize="48sp"
             android:gravity="center"
             android:layout_marginTop="16dp"/>
 
-    </LinearLayout>
-    <!-- Background -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <ImageView
-            android:id="@+id/my_image_view"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="-20dp"
-            android:alpha="0.6"
-            android:src="@drawable/aaa_0130"
-            app:layout_constraintWidth_percent="1"
-            app:layout_constraintHeight_percent="1"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:visibility="visible"/>
+            android:layout_height="wrap_content"
+            android:text="TextView" />
 
     </LinearLayout>
 
