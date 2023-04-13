@@ -10,4 +10,5 @@
     <color name="c1">#482317</color>
     <color name="c2">#985836</color>
     <color name="c3">#BCB0A1</color>
+    <color name="text_color">@color/c1</color>
 </resources>

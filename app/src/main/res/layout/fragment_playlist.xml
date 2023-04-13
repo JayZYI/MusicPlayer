@@ -8,29 +8,11 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    <ImageView
-        android:visibility="visible"
-        android:id="@+id/my_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="-20dp"
-        app:layout_constraintWidth_percent="1"
-        app:layout_constraintHeight_percent="1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:src="@drawable/aaa_0130" />
-    </LinearLayout>
 
 
     <ScrollView
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="160dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="none">
@@ -48,6 +30,7 @@
 
         <!-- Left side -->
         <LinearLayout
+            android:id="@+id/playlist_create"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -55,7 +38,7 @@
 
             <ImageView
                 android:layout_marginHorizontal="7dp"
-                android:layout_width="20dp"
+                android:layout_width="25dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/ic_add_box"/>
 
@@ -63,6 +46,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:gravity="center"
+                android:textColor="@color/c1"
                 android:text="Create Playlist"/>
         </LinearLayout>
 
@@ -99,14 +83,14 @@
 
             <!-- Background image with blur effect -->
             <FrameLayout
+                android:id="@+id/playlist_item"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:id="@+id/background_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/img_kda"/>
+                    android:src="@drawable/bgblur"/>
 
 <!--                <View-->
 <!--                    android:layout_width="match_parent"-->
@@ -119,7 +103,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Your Text Here"
+                android:text="Liked Songs"
                 android:textStyle="bold"
                 android:textColor="@color/c1"
                 android:textSize="24sp"
@@ -135,336 +119,463 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"/>
 
-        </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
 
 
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/background_image"
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein2"/>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgive Me"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein1"/>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thank You Allah"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_banana"/>
+                </androidx.cardview.widget.CardView>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Velvet Underground"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein2"/>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgive Me"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein1"/>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thank You Allah"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_banana"/>
+                </androidx.cardview.widget.CardView>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Velvet Underground"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout><RelativeLayout
-        android:layout_columnWeight="1"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="8dp"
-        android:layout_width="171dp"
-        android:layout_height="171dp">
-
-
-        <!-- Background image with blur effect -->
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
+            <!-- Icon at top right corner -->
             <ImageView
-                android:id="@+id/background_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/img_kda"/>
+                android:layout_height="match_parent">
 
-            <!--                <View-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="match_parent"-->
-            <!--                    android:background="@drawable/blur_effect"/>-->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein2"/>
 
-        </FrameLayout>
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
 
-        <!-- Text in the middle -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Your Text Here"
-            android:textStyle="bold"
-            android:textColor="@color/c1"
-            android:textSize="24sp"
-            android:layout_centerInParent="true"/>
+            </FrameLayout>
 
-        <!-- Icon at top right corner -->
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_more"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"/>
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forgive Me"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
 
-    </RelativeLayout>
+            <!-- Icon at top right corner -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/mahzein1"/>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
+
+            </FrameLayout>
+
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thank You Allah"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
+
+            <!-- Icon at top right corner -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_columnWeight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            android:layout_width="171dp"
+            android:layout_height="171dp">
+
+
+            <!-- Background image with blur effect -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="10dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/img_banana"/>
+                </androidx.cardview.widget.CardView>
+
+                <!--                <View-->
+                <!--                    android:layout_width="match_parent"-->
+                <!--                    android:layout_height="match_parent"-->
+                <!--                    android:background="@drawable/blur_effect"/>-->
+
+            </FrameLayout>
+
+            <!-- Text in the middle -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Velvet Underground"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/c1"
+                android:textSize="24sp"
+                android:layout_centerInParent="true"/>
+
+            <!-- Icon at top right corner -->
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"/>
+
+        </RelativeLayout>
+
+
+
 
 
     </GridLayout>

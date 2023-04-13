@@ -35,33 +35,33 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         android:alpha="0.6"
         android:layout_marginTop="105dp">
 
         <Button
-            android:id="@+id/tracks_button"
+            android:id="@+id/playlist_button"
             android:layout_width="69dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="25dp"
+            android:layout_marginLeft="10dp"
             android:textAllCaps="false"
             android:padding="8dp"
             android:text="Playlist"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:textSize="9dp"/>
+            android:textSize="12dp"/>
         <Button
-            android:id="@+id/playlist_button"
+            android:id="@+id/tracks_button"
             android:layout_width="63dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="6dp"
+            android:layout_marginLeft="13dp"
             android:textAllCaps="false"
             android:padding="8dp"
             android:text="Tracks"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:textSize="9dp"/>
+            android:textSize="12dp"/>
     </LinearLayout>
 
 
@@ -81,7 +81,6 @@
             android:id="@+id/fragment_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"/>
-
     </RelativeLayout>
 
 
